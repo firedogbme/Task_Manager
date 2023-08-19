@@ -1,6 +1,5 @@
 package com.example.task_manager
 
-import android.media.Image
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -53,14 +52,19 @@ fun MainApp(){
 }
 
 @Composable
-fun AppDisplay(imagePainter: Painter, textResult: String, textCongrats: String, modifier: Modifier = Modifier){
+private fun AppDisplay(
+    imagePainter: Painter,
+    textResult: String,
+    textCongrats: String,
+    modifier: Modifier = Modifier
+) {
     Column(
         modifier = Modifier
             .fillMaxHeight()
             .fillMaxWidth(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
+    ) {
         Image(
             painter = imagePainter,
             contentDescription = null
